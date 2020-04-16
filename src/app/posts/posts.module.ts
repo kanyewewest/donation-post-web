@@ -9,7 +9,6 @@ import { PostViewerComponent } from './post-viewer/post-viewer.component';
 import { LocationComponent } from './location/location.component';
 
 
-
 @NgModule({
   declarations: [
     PostsComponent,

@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { MapboxService } from 'src/app/services/mapbox.service';
 
 @Component({
   selector: 'app-location',
@@ -6,26 +7,13 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./location.component.scss']
 })
 export class LocationComponent implements AfterViewInit {
-  @ViewChild('mapContainer', { static: false }) viewMap: ElementRef;
-  private map: google.maps.Map;
-  private coordinates: google.maps.LatLng;
-  private mapOptions: google.maps.MapOptions;
-  private latitude: number = 40.73;
-  private longitude: number = -73.93;
-
-  constructor() { }
+  constructor(private mapboxSvc: MapboxService) { }
 
   ngAfterViewInit() {
-    this.mapChangeCoord(this.latitude, this.longitude);
-  }
+    //this.mapChangeCoord(this.latitude, this.longitude);
 
-  mapChangeCoord(latitude: number, longitude: number) {
-    this.coordinates = new google.maps.LatLng(latitude, longitude);
-    this.mapOptions = {
-      center: this.coordinates,
-      zoom: 8
-    }
-    this.map = new google.maps.Map(this.viewMap.nativeElement,
-      this.mapOptions);
+    let latitude: number = 40.73;
+    let longitude: number = -73.93;
+    this.mapboxSvc.init(latitude, longitude);
   }
 }
