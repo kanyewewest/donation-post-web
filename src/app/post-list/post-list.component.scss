@@ -1,17 +1,19 @@
 .item-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: .5rem;
+  gap: 1.4rem;
   justify-content: stretch;
-  border: green 1px solid;
+  //border: green 1px solid;
 
   .item {
+    background-color: white;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    border: red 1px solid;
-    padding: 1rem;
+    //border: red 1px solid;
+    padding: 1.5rem;
     break-inside: avoid;
+    cursor: pointer;
 
     .title {
       display: -webkit-box;

@@ -16,10 +16,14 @@ body {
   padding: 0;
 }
 
+.content {
+  background-color: #f3f8fb;
+}
+
 .section {
   max-width: 1020px;
-  margin: auto;
-  padding: .5rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .border-round-s {
@@ -36,4 +40,16 @@ body {
 
 .border-round {
   border-radius: 50%;
+}
+
+.shadow-s {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 2px 3px rgba(0, 0, 0, 0.01);
+}
+
+.shadow-m {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.shadow-l {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
