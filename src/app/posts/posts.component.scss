@@ -1,0 +1,32 @@
+// .left-aside {
+//   display: inline-block;
+//   //position: fixed;
+//   height: 100%;
+//   width: 30%;
+//   min-width: 400px;
+// }
+
+.wrapper {
+  // display: grid;
+  // grid-template-columns: 30% 1fr;
+  // grid-template-rows: 1fr;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.left-aside {
+  overflow: auto;
+  flex: 1 400px;
+}
+
+.content {
+  overflow: auto;
+  flex: 3 auto;
+}
+
+/* Larger than desktop */
+@media (max-width: 1000px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+}

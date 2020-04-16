@@ -6,12 +6,14 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostDescriptionComponent } from './post-description/post-description.component';
 import { PostViewerComponent } from './post-viewer/post-viewer.component';
+import { LocationComponent } from './location/location.component';
 
 
 
 @NgModule({
   declarations: [
     PostsComponent,
+    LocationComponent,
     PostListComponent,
     PostDetailComponent,
     PostDescriptionComponent,
