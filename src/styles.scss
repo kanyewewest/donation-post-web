@@ -23,7 +23,12 @@ body {
 .section {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.icon {
+  width: 32px;
+  height: auto;
 }
 
 .border-round-s {

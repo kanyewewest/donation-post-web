@@ -1,5 +1,6 @@
 <section class="section item-list">
-  <article *ngFor="let i of [1,2,3,4,6]" class="item border-round-s shadow-s">
+  <article [routerLink]="['edit', 'abd']" routerLinkActive="active" *ngFor="let i of [1,2,3,4,5,6,7,8,9]"
+    class="item border-round-s shadow-s">
     <div class="img-content">
       <div class="img-spacer">
       </div>
