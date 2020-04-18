@@ -1,0 +1,17 @@
+ul {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  list-style: none;
+
+  li {
+    align-content: center;
+    align-self: center;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}

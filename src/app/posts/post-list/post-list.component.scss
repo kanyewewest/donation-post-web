@@ -3,14 +3,13 @@
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 1.4rem;
   justify-content: stretch;
-  //border: green 1px solid;
+  list-style: none;
 
   .item {
     background-color: white;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    //border: red 1px solid;
     padding: 1.5rem;
     break-inside: avoid;
     cursor: pointer;
@@ -22,12 +21,9 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       max-height: calc(1.15 * 1.5em * 2);
-      //font-weight: normal;
     }
   }
 }
-
-
 
 .img-content {
   position: relative;
@@ -39,7 +35,6 @@
 
   .img-display {
     width: 100%;
-    //max-width: 100%;
     min-height: 100%;
     vertical-align: top;
     position: absolute;

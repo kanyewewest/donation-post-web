@@ -2,12 +2,19 @@
 @import "~normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-size: 12px;
   min-width: 20rem;
   font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: #2e3538;
+  background-color: #f3f8fb;
 }
 
 * {
@@ -16,14 +23,61 @@ body {
   padding: 0;
 }
 
-.bg-contrast {
-  background-color: #f3f8fb;
+:focus {
+  outline: none;
 }
 
-.section {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem;
+.txt-xxl {
+  font-size: 3em;
+}
+
+//h1
+.txt-xl {
+  font-size: 2em;
+}
+
+//h2
+.txt-l {
+  font-size: 1.5em;
+}
+
+//h3
+.txt-m {
+  font-size: 1.17em;
+}
+
+input[type="text"],
+input[type="number"] {
+  @extend .txt-m,
+  .border-round-m;
+  padding: .8rem;
+  border: 1px solid #ddd;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+
+  &>*:not(:last-child) {
+    margin-bottom: .8rem;
+  }
+}
+
+.gutter {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.limiter {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icon {

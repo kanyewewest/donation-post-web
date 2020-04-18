@@ -7,6 +7,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostDescriptionComponent } from './post-description/post-description.component';
 import { PostViewerComponent } from './post-viewer/post-viewer.component';
 import { LocationComponent } from './location/location.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LocationComponent } from './location/location.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     PostsRoutingModule
   ]
 })
