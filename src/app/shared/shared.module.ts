@@ -4,7 +4,7 @@ import { FlipDirective } from './directives/flip/flip.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StickyDirective } from './directives/sticky/sticky.directive';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { StickyDirective } from './directives/sticky/sticky.directive';
     StickyDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,

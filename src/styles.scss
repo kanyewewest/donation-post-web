@@ -46,6 +46,22 @@ body {
   font-size: 1.17em;
 }
 
+.txt-bold {
+  font-weight: bold;
+}
+
+.txt-contrast {
+  color: #4497ca;
+}
+
+.txt-contrast-d {
+  color: #6f8d9f;
+}
+
+.txt-contrast-l {
+  color: hsla(203, 53%, 70%, 1);
+}
+
 input[type="text"],
 input[type="number"] {
   @extend .txt-m,
@@ -54,8 +70,18 @@ input[type="number"] {
   border: 1px solid #ddd;
 }
 
-.txt-bold {
-  font-weight: bold;
+a {
+  text-decoration: inherit;
+  color: inherit;
+
+  &.active {
+    @extend .txt-bold,
+    .txt-contrast;
+  }
+
+  &:hover {
+    @extend .txt-contrast-d;
+  }
 }
 
 .field-group {
