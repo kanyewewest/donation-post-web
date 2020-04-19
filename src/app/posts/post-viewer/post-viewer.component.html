@@ -1,17 +1,13 @@
-<div class="carousel-btn">
+<div [ngClass]="{'disabled' : !btnStatus[0]}" class="carousel-btn" (click)="changePage('left')">
   <img class="icon rotate-90" src="assets/icons/arrow-down.svg">
 </div>
 <div class="carousel-thumbs">
-  <div class="img-content">
-    <img class="img-display" src="https://placekitten.com/440/248" />
-  </div>
-  <div class="img-content">
-    <img class="img-display" src="https://placekitten.com/440/248" />
-  </div>
-  <div class="img-content">
-    <img class="img-display" src="https://placekitten.com/440/248" />
+  <div appPageTranslate [translate]="percentageTranslate" *ngFor="let i of mutatedImgArray" class="carousel-page">
+    <div *ngFor="let j of i" class="img-content">
+      <img class="img-display" src="https://placekitten.com/440/248" />
+    </div>
   </div>
 </div>
-<div class="carousel-btn">
+<div [ngClass]="{'disabled' : !btnStatus[1]}" class="carousel-btn" (click)="changePage('right')">
   <img class="icon rotate-270" src="assets/icons/arrow-down.svg">
 </div>
