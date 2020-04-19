@@ -1,8 +1,26 @@
 <div class="item-detail">
-  <section class="card border-round-s shadow-s">
-    Image Viewer
+
+  <section class="viewer card">
+    <div class="carousel-btn">
+      <img class="icon rotate-90" src="assets/icons/arrow-down.svg">
+    </div>
+    <div class="carousel-thumbs">
+      <div class="img-content">
+        <img class="img-display" src="https://placekitten.com/440/248" />
+      </div>
+      <div class="img-content">
+        <img class="img-display" src="https://placekitten.com/440/248" />
+      </div>
+      <div class="img-content">
+        <img class="img-display" src="https://placekitten.com/440/248" />
+      </div>
+    </div>
+    <div class="carousel-btn">
+      <img class="icon rotate-270" src="assets/icons/arrow-down.svg">
+    </div>
   </section>
-  <section class="description card border-round-s shadow-s">
+
+  <section class="description card">
     <h2 class="txt-xl">Nostrud ex esse laboris tempor id non consectetur dolor enim cillum labore aliquip. Et magna
       labore adipisicing
       irure magna minim. Id non ullamco ullamco id enim consequat eu dolore nulla ea deserunt adipisicing duis
@@ -24,7 +42,10 @@
       <span class="badge">Ends in: 10d 6h</span>
     </footer>
   </section>
-  <aside class="card border-round-s shadow-s">
-    Recommendations
+  <aside class="recommendations card">
+    <h2 class="txt-xl">Similar to this Post</h2>
+    <app-post-item lineClip="3"></app-post-item>
+    <app-post-item lineClip="3"></app-post-item>
+    <app-post-item lineClip="3"></app-post-item>
   </aside>
 </div>

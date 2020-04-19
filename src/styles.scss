@@ -80,6 +80,15 @@ body {
   color: var(--blue-l);
 }
 
+@for $i from 1 through 5 {
+  .txt-clip-#{$i} {
+    display: -webkit-box;
+    -webkit-line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 input[type="text"],
 input[type="number"] {
   @extend .txt-m,
@@ -118,10 +127,8 @@ a {
   margin-right: var(--s-s);
 }
 
-.limiter {
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
+.img-display {
+  @extend .border-round-s;
 }
 
 .card {
@@ -157,6 +164,14 @@ a {
 
 .border-round {
   border-radius: 50%;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
 }
 
 .shadow-s {

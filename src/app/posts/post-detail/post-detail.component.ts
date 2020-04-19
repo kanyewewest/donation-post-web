@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PostDetailComponent implements OnInit {
 
   constructor() {
-    console.log('a')
+
   }
 
   ngOnInit(): void {

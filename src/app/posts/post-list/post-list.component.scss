@@ -24,24 +24,6 @@
   }
 }
 
-.img-content {
-  position: relative;
-  overflow: hidden;
-
-  .img-spacer {
-    padding-bottom: 56%;
-  }
-
-  .img-display {
-    width: 100%;
-    min-height: 100%;
-    vertical-align: top;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 .loader {
   margin-top: var(--s-l);
   display: flex;
