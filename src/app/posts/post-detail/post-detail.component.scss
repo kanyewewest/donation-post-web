@@ -1,0 +1,31 @@
+.item-detail {
+  .description {
+
+    &>*:not(:first-child) {
+      margin-top: var(--s-m);
+    }
+  }
+
+  .item-detail>* {
+    margin-bottom: var(--s-l);
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .item-detail {
+    display: grid;
+    gap: var(--s-l);
+    grid-template-columns: 2fr 1fr;
+    //grid-template-rows: 1fr 1fr;
+
+    &>* {
+      margin-bottom: 0;
+    }
+
+    &>aside {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+  }
+}

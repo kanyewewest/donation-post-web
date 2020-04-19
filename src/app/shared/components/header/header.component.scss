@@ -10,8 +10,8 @@ ul {
 
   a {
     display: inline-block;
-    margin: 0 1.5rem;
-    padding: 1rem;
+    margin: 0 var(--s-xl);
+    padding: var(--s-m);
     cursor: pointer;
   }
 }

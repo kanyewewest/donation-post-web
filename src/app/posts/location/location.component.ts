@@ -13,13 +13,13 @@ export class LocationComponent implements AfterViewInit {
 
     let latitude: number = 40.73;
     let longitude: number = -73.93;
-    this.mapboxSvc.init(latitude, longitude)
-      .then(() => {
-        //Success
-        console.log("Mapbox loaded successfully");
-      }, () => {
-        //Reject
-        console.log("Mapbox failed to load!");
-      });
+    // this.mapboxSvc.init(latitude, longitude)
+    //   .then(() => {
+    //     //Success
+    //     console.log("Mapbox loaded successfully");
+    //   }, () => {
+    //     //Reject
+    //     console.log("Mapbox failed to load!");
+    //   });
   }
 }

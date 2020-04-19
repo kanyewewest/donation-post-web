@@ -2,13 +2,13 @@ aside {
   display: none;
 }
 
-section {
-  padding-left: 1rem;
-  padding-right: 1rem;
+article {
+  padding-left: var(--s-m);
+  padding-right: var(--s-m);
 
   &>* {
     display: block;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--s-xl);
   }
 }
 
@@ -24,14 +24,14 @@ section {
     top: 0;
   }
 
-  section {
-    margin-left: calc(1rem + 40%);
+  article {
+    margin-left: calc(var(--s-m) + 40%);
   }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  section {
+  article {
     margin-left: 31rem;
   }
 }

@@ -1,22 +1,21 @@
 .item-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: 1.4rem;
+  gap: var(--s-l);
   justify-content: stretch;
   list-style: none;
 
   .item {
-    background-color: white;
+    background-color: var(--white);
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    padding: 1.5rem;
     break-inside: avoid;
     cursor: pointer;
 
     .title {
       display: -webkit-box;
-      margin-top: 1rem;
+      margin-top: var(--s-m);
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -44,7 +43,7 @@
 }
 
 .loader {
-  margin-top: 1.4rem;
+  margin-top: var(--s-l);
   display: flex;
   align-items: center;
   flex-flow: column;
