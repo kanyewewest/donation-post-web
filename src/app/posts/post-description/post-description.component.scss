@@ -1,0 +1,4 @@
+:host>*:not(:first-child) {
+  display: block;
+  margin-top: var(--s-xl);
+}

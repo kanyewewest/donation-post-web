@@ -5,22 +5,8 @@
   justify-content: stretch;
   list-style: none;
 
-  .item {
-    background-color: var(--white);
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    break-inside: avoid;
+  &>* {
     cursor: pointer;
-
-    .title {
-      display: -webkit-box;
-      margin-top: var(--s-m);
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      max-height: calc(1.15 * 1.5em * 2);
-    }
   }
 }
 

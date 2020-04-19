@@ -1,7 +1,8 @@
 <ul class="item-list">
-  <li [routerLink]="['edit', 'abd']" routerLinkActive="active" *ngFor="let i of [1,2,3,4,5,6,7,8,9]" class="item card">
+  <li *ngFor="let i of [1,2,3,4,5,6,7,8,9]" [routerLink]="['edit', i]" routerLinkActive="active" class="item card">
     <app-post-item hasImage="true"></app-post-item>
   </li>
+
 </ul>
 <div class="loader border-round-s">
   <span class="txt-bold">Load More</span>
