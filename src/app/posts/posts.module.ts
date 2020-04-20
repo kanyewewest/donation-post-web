@@ -9,7 +9,6 @@ import { PostViewerComponent } from './post-viewer/post-viewer.component';
 import { LocationComponent } from './location/location.component';
 import { SharedModule } from '../shared/shared.module';
 import { PostItemComponent } from './post-item/post-item.component';
-import { PageTranslateDirective } from './post-viewer/page-translate/page-translate.directive';
 
 
 @NgModule({
@@ -20,8 +19,7 @@ import { PageTranslateDirective } from './post-viewer/page-translate/page-transl
     PostDetailComponent,
     PostDescriptionComponent,
     PostViewerComponent,
-    PostItemComponent,
-    PageTranslateDirective,
+    PostItemComponent
   ],
   imports: [
     CommonModule,

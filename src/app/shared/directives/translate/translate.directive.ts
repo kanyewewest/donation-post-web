@@ -1,9 +1,9 @@
 import { Directive, Input, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[appPageTranslate]'
+  selector: '[appTranslate]'
 })
-export class PageTranslateDirective {
+export class TranslateDirective {
   @Input()
   public set translate(percentage: number) {
     this.setTranslateStyle(percentage);

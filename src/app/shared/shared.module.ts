@@ -4,6 +4,7 @@ import { FlipDirective } from './directives/flip/flip.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StickyDirective } from './directives/sticky/sticky.directive';
+import { TranslateDirective } from './directives/translate/translate.directive';
 import { RouterModule } from '@angular/router';
 
 
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     FlipDirective,
-    StickyDirective
+    StickyDirective,
+    TranslateDirective
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     FlipDirective,
-    StickyDirective
+    StickyDirective,
+    TranslateDirective
   ]
 })
 export class SharedModule { }

@@ -2,7 +2,7 @@
   <img class="icon rotate-90" src="assets/icons/arrow-down.svg">
 </div>
 <div class="carousel-thumbs">
-  <div appPageTranslate [translate]="percentageTranslate" *ngFor="let i of mutatedImgArray" class="carousel-page">
+  <div appTranslate [translate]="percentageTranslate" *ngFor="let i of mutatedImgArray" class="carousel-page">
     <div *ngFor="let j of i" class="img-content">
       <img class="img-display" src="https://placekitten.com/440/248" />
     </div>
