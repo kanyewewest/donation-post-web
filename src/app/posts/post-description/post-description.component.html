@@ -1,20 +1,12 @@
-<h2 class="txt-xl">Nostrud ex esse laboris tempor id non consectetur dolor enim cillum labore aliquip. Et magna
-  labore adipisicing
-  irure magna minim. Id non ullamco ullamco id enim consequat eu dolore nulla ea deserunt adipisicing duis
-  incididunt. Occaecat laboris voluptate proident qui. Pariatur dolore amet commodo laborum dolor sunt laborum anim.
+<h2 class="txt-xl">{{post.title}}
 </h2>
 <h3>
-  Clothes • Furniture • Toys
+  {{post.tags | arrMap:'tag' | arrJoin}}
 </h3>
 <h3>
-  Av. Arequipa, Miraflores • 10km from your location
+  {{post.address}} • 10km from your location
 </h3>
-<p class="description txt-m">Reprehenderit quis cupidatat cupidatat dolore ullamco anim in officia eu aliqua mollit.
-  Labore in sint laborum
-  minim et occaecat cillum duis aliquip dolor dolor eiusmod tempor. Et ipsum velit exercitation adipisicing
-  aliquip
-  aliqua dolor deserunt occaecat esse exercitation aute. Dolore ea nisi voluptate minim ad duis amet pariatur
-  aliquip veniam in proident. Irure sint commodo anim ex labore mollit id anim cillum amet.</p>
+<p class="description txt-m">{{post.description}}</p>
 <footer class="extra">
   <span class="badge">Ends in: 10d 6h</span>
 </footer>

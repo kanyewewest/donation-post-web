@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlipDirective } from './directives/flip/flip.directive';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { StickyDirective } from './directives/sticky/sticky.directive';
-import { TranslateDirective } from './directives/translate/translate.directive';
+import { TranslateDirective } from './directives/translate.directive';
 import { RouterModule } from '@angular/router';
+import { ArrJoinPipe } from './pipes/arr-join.pipe';
+import { ArrMapPipe } from './pipes/arr-map.pipe';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    FlipDirective,
-    StickyDirective,
-    TranslateDirective
+    TranslateDirective,
+    ArrJoinPipe,
+    ArrMapPipe
   ],
   imports: [
     CommonModule,
@@ -23,9 +23,9 @@ import { RouterModule } from '@angular/router';
   exports: [
     HeaderComponent,
     FooterComponent,
-    FlipDirective,
-    StickyDirective,
-    TranslateDirective
+    TranslateDirective,
+    ArrJoinPipe,
+    ArrMapPipe
   ]
 })
 export class SharedModule { }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../..//environments/environment'
 import * as mapboxgl from 'mapbox-gl';
 
 @Injectable({
@@ -6,7 +7,7 @@ import * as mapboxgl from 'mapbox-gl';
 })
 export class MapboxService {
   mapbox: typeof mapboxgl = mapboxgl;
-  mapboxToken: string = 'pk.eyJ1IjoiZHZja3l5IiwiYSI6ImNrOTJoa2dyZTA3NzczZW85aWI2MXp2bjgifQ.1azZbBtPPBE_grS12M3zrA';
+  mapboxToken: string = environment.MAPBOX_TOKEN;
   map: mapboxgl.Map;
   zoom: number = 15;
   elementId: string = "map";

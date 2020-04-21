@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IPost } from 'src/app/core/models/post.model';
 
 @Component({
   selector: 'app-post-item',
@@ -7,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostItemComponent implements OnInit {
 
+  @Input() post: IPost;
   @Input() hasImage: boolean = false;
   @Input() lineClip: number = 1;
 
@@ -18,5 +20,4 @@ export class PostItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -1,5 +1,5 @@
-import { ITag } from './tag';
-import { IUser } from './user';
+import { ITag } from './tag.model';
+import { IUser } from './user.model';
 
 export interface IPost {
     id: number
@@ -15,6 +15,6 @@ export interface IPost {
     similar?: IPost[]
     tags: ITag[]
 
-    dateExpiration: string
+    dateExpiration?: string
     dateCreated: string
 }
