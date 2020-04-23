@@ -1,19 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { ApiService } from './api.service';
 import { IPost } from '../models/post.model';
-import { dummyPosts } from '../dummies/post.dummy';
+import { dummyPosts, dummyPost } from '../dummies/post.dummy';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-
   constructor(private api: ApiService) { }
 
   getPost(id: number): Observable<IPost> {
-    return this.api.get(`/post/${id}`);
+    return new Observable<IPost>(sub => {
+      sub.next(dummyPost);
+    }).pipe(
+      tap((res) => console.log(res)),
+      delay(2000)
+    );
+    //return this.api.get(`/post/${id}`);
   }
 
   //TODO: posts filters
@@ -22,7 +27,7 @@ export class PostService {
       sub.next(dummyPosts);
     }).pipe(
       tap((res) => console.log(res)),
-      delay(5000)
+      delay(2000)
     );
     //return this.api.get(`/post`);
   }

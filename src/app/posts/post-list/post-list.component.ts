@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IPost } from 'src/app/core/models/post.model';
 import { PostService } from 'src/app/core/services/post.service';
 @Component({
@@ -6,31 +6,23 @@ import { PostService } from 'src/app/core/services/post.service';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent {
   posts: IPost[] = [];
 
   constructor(private postSvc: PostService) {
-    this.fetchFromApi();
+
   }
 
-  fetchFailed() {
-    //TODO: handle error
-  }
-
-  fetchFromApi() {
+  ngOnInit() {
     this.postSvc.getPosts()
       .subscribe(
-        (res: IPost[]) => {
-          this.posts = res;
-        },
-        err => {
-          //fetchFailed();
-          console.log(err);
-        }
+        res => this.posts = res,
+        err => this.fetchFailed(err)
       )
   }
 
-  ngOnInit(): void {
+  fetchFailed(err) {
+    //TODO: handle error
+    console.log(err);
   }
-
 }

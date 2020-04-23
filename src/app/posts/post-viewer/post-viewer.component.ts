@@ -1,36 +1,43 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-post-viewer',
   templateUrl: './post-viewer.component.html',
   styleUrls: ['./post-viewer.component.scss']
 })
-export class PostViewerComponent implements OnInit {
+export class PostViewerComponent {
 
   page: number = 1;
   pagesN: number = 0;
-  imgArray: number[] = [1, 2, 3, 4, 5, 6, 7];
-  mutatedImgArray: number[][] = [];
+  _mutatedImgArray: string[][];
+  @Input()
+  set imgArray(imgs: string[]) {
+    this.pagesN = Math.ceil(imgs.length / 3);
+
+    //split imgs into groups of 3
+    this._mutatedImgArray = imgs.map(function (e, i) {
+      return i % 3 === 0 ? imgs.slice(i, i + 3) : null;
+    }).filter(function (e) { return e; });
+    this.checkButtons();
+  }
+
+  get mutatedImgArray() {
+    return this._mutatedImgArray;
+  }
+
   //0 left 1 right
   btnStatus: Array<boolean> = [false, false];
   percentageTranslate: number = 0;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   translatePage(direction: 'left' | 'right') {
     let _direction = direction === 'left' ? 1 : -1;
     this.percentageTranslate += _direction * 100;
   }
 
-  ngOnInit(): void {
-    if (this.imgArray.length !== 0) {
-      this.pagesN = Math.ceil(this.imgArray.length / 3);
-      while (this.imgArray.length > 0) {
-        this.mutatedImgArray.push(this.imgArray.splice(0, this.pagesN));
-      }
-
-      this.checkButtons();
-    }
+  ngOnInit() {
   }
 
   changePage(direction: 'left' | 'right') {

@@ -1,16 +1,13 @@
-<div class="item-detail">
-
+<div *ngIf="post" class="item-detail">
   <section class="card">
-    <app-post-viewer></app-post-viewer>
+    <app-post-viewer [imgArray]="post.imgsUrl"></app-post-viewer>
   </section>
-
   <section class="card">
-    <app-post-description></app-post-description>
+    <app-post-description [post]="post"></app-post-description>
   </section>
   <aside class="card">
     <h2 class="txt-xl">Similar to this Post</h2>
-    <app-post-item [routerLink]="['../', '1']" lineClip="3"></app-post-item>
-    <app-post-item [routerLink]="['../', '2']" lineClip="3"></app-post-item>
-    <app-post-item [routerLink]="['../', '3']" lineClip="3"></app-post-item>
+    <app-post-item *ngFor="let _post of post.similar" [post]="_post" [routerLink]="['../', post.id]" lineClip="3">
+    </app-post-item>
   </aside>
 </div>

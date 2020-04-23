@@ -14,7 +14,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ArrJoinPipe implements PipeTransform {
 
   transform(value: Array<string | number>, separator: string = ' • '): string {
-    console.log(value);
     return value.join(separator);
   }
 

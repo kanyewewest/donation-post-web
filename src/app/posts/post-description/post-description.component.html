@@ -1,7 +1,7 @@
 <h2 class="txt-xl">{{post.title}}
 </h2>
 <h3>
-  {{post.tags | arrMap:'tag' | arrJoin}}
+  {{post.tags | arrMap:'name' | arrJoin}}
 </h3>
 <h3>
   {{post.address}} • 10km from your location

@@ -14,7 +14,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ArrMapPipe implements PipeTransform {
 
   transform<T>(value: Array<T>, key: string): Array<T[keyof T]> {
-    console.log(value);
     return value.map((v) => v[key]);
   }
 }
