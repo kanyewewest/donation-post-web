@@ -3,12 +3,16 @@
   </div>
   <img class="img-display" [src]="post.thumbnailUrl" />
 </div>
-<h2 class="title" [ngClass]="txtLineClipClass">
+<h2 [ngClass]="txtLineClipClass">
   {{post.title}}
 </h2>
-<h3 class="title txt-clip-1">
+<h3 class="txt-clip-1">
   10km from your location
 </h3>
-<h4 class="title txt-clip-1">
+<h4>
   {{post.tags | arrMap:'name' | arrJoin}}
 </h4>
+<footer class="extra" *ngIf="countdownExpiration$ && hasCountdown">
+  <span class="badge">Ends in: {{countdownExpiration$ | async}}
+  </span>
+</footer>

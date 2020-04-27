@@ -8,5 +8,6 @@
 </h3>
 <p class="description txt-m">{{post.description}}</p>
 <footer class="extra">
-  <span class="badge">Ends in: 10d 6h</span>
+  <span class="badge" *ngIf="countdownExpiration$">Ends in: {{countdownExpiration$ | async}}
+  </span>
 </footer>

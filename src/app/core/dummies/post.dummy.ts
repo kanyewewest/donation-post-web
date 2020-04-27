@@ -29,6 +29,7 @@ export const dummyPost: IPost = {
             name: "Tag2"
         }
     ],
+    dateExpiration: "2020-04-30T11:08:45.750Z",
     dateCreated: "2020-04-20T11:08:45.750Z"
 }
 

@@ -16,6 +16,11 @@
   }
 }
 
-.title {
+:host>*:not(:first-child) {
+  display: block;
   margin-top: var(--s-m);
+}
+
+.extra>* {
+  display: inline-block;
 }

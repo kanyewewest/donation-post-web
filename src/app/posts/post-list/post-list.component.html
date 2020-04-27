@@ -1,8 +1,7 @@
 <ul class="item-list">
   <li *ngFor="let post of posts" [routerLink]="['edit', post.id]" routerLinkActive="active" class="item card">
-    <app-post-item [post]="post" hasImage="true"></app-post-item>
+    <app-post-item [post]="post" hasImage="true" hasCountdown="true"></app-post-item>
   </li>
-
 </ul>
 <div class="loader border-round-s">
   <span class="txt-bold">Load More</span>

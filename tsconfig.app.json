@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["mapbox-gl", "animejs"]
+    "types": ["mapbox-gl", "moment"]
   },
   "files": [
     "src/main.ts",
